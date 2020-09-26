@@ -1,7 +1,7 @@
 public class SnakeLadder{
 	
 	public static int position = 0;
-	//public static int die = 0;
+	public static int die_count = 0;
 	
 	public static void main(String[] args) {
 		System.out.println("Snake and Ladder game played with single player at start position 0");
@@ -9,6 +9,7 @@ public class SnakeLadder{
 			int check = checkOption();
 			
 		}
+		System.out.println("Number of times die was rolled : " + die_count);
 	}
 	
 	public static int rollDie() {
@@ -16,6 +17,7 @@ public class SnakeLadder{
 		while(die == 0) {
 			die = (int)(Math.floor(Math.random() * 10) % 7);
 		}
+		die_count++;
 		System.out.print("Die Value is : "+die);
 		return die;
 	}
