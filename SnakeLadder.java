@@ -8,9 +8,12 @@ public class SnakeLadder{
 	}
 	
 	public static int rollDie() {
-		int check = (int)(Math.floor(Math.random() * 10) % 7);
-		System.out.println("Die Value is : "+check);
-		return check;
+		int die = 0;
+		while(die == 0) {
+			die = (int)(Math.floor(Math.random() * 10) % 7);
+		}
+		System.out.println("Die Value is : "+die);
+		return die;
 	}
 	public static int checkOption() {
 		int check = (int)(Math.floor(Math.random() * 10) % 3);
