@@ -25,6 +25,8 @@ public class SnakeLadder{
 		switch(check) {
 			case 1:
 				position = position + value;
+				if (position > 100)
+					position = position - value;
 				System.out.println(" [Option : Ladder]\n" + " Player moves to position " + position + "\n");
 				break;
 				
